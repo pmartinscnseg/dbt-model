@@ -5,7 +5,9 @@ do dbt que está integrado com o Airbyte, Snowflake, Airflow
 
 ### Configuração do modelo:
 
-1. Editar o arquivo dbt_project.yml:
+1. Editar o arquivo dbt_project.yml:  
+  
+  
 ```name: 'nome_do_projeto' ```  
 ```
 models:
