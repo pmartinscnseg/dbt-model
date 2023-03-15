@@ -7,8 +7,12 @@ do dbt que está integrado com o Airbyte, Snowflake, Airflow
 
 1. Editar o arquivo dbt_project.yml:  
   
-  
+
 ```name: 'nome_do_projeto' ```  
+  
+```profile: 'o nome do profile definido o profiles.yml'```  
+  
+
 ```
 models:
   nome_do_projeto:
@@ -16,3 +20,5 @@ models:
     example:
       materialized: view
 ```
+
+2. Criar o arquivo profiles.yml e colocar as configurações do Snowflake
