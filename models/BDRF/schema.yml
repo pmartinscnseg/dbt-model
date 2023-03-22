@@ -1,0 +1,21 @@
+
+version: 2
+
+models:
+    - name: monitoramentorf
+      description: "Monitoramento de recuperação e devoluções de veículos que foram furtados ou roubados"
+      columns:
+          - name: numbolocorrencia
+            description: "Identificador único do boletim de ocorrência principal"
+          - name: status
+            description: "Status atual da ocorrência"
+            tests:
+              - not_null:
+                  config:
+                    +severity: warn
+              #- accepted_values:
+                  #config:
+                    #+severity: warn
+                    #warn_if: ">=1"
+                    #values: ['DEVOLVIDO', 'RECUPERADO', 'NÃO RECUPERADO']
+                    

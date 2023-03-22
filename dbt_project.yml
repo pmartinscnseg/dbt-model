@@ -33,6 +33,6 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 models:
   poc_bdv:
-    # Applies to all files under models/example/
-    example:
-      materialized: view
+    materialized: "{{ 'table' if target.name == 'dev' else 'view' }}"
+  elementary:
+    +schema: 'elementary'
