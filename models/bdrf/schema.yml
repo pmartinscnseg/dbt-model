@@ -1,0 +1,16 @@
+
+version: 2
+
+models:
+    - name: monitoramento
+      description: "Monitoramento de roubos e furtos"
+      columns:
+          - name: hash_value
+            description: "Chave para combinação chassi e boletim de ocorrência"
+            tests:
+                - unique:
+                    config:
+                      severity: WARN
+                - not_null:
+                    config:
+                      severity: WARN
